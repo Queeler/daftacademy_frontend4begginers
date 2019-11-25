@@ -1,0 +1,403 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(./images/background.svg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+img{
+    border-top: 3px solid rgb(236, 0, 140);
+}
+
+h2{
+    letter-spacing: 3.8px;
+    font-family: "Open Sans";
+    font-weight: bold;
+    font-size: 28px;
+    color: rgb(236, 0, 140);
+    text-transform: uppercase;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.content-section__header{
+    margin-bottom: 4%;
+}
+
+/* HEAD-----------------------------------------------------------------HEAD */
+.page-header{
+    padding-top: 5px;
+}
+
+.page-header img{
+    border: none;
+}
+
+.page-navigation__item{
+    line-height: 2;
+}
+
+a{
+    letter-spacing: 6.7px;
+    font-family: "Open Sans";
+    font-size: 13px;
+    font-weight: bold;
+    color: rgba(236, 0, 140, 0.8);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+a:active{
+    letter-spacing: 6.5px;
+    font-family: "Helvetica";
+    color: rgba(236, 0, 140, 0.7);
+}
+
+a:hover{
+    letter-spacing: 6.5px;
+    font-family: "Helvetica";
+    color: rgba(236, 0, 140, 0.9);
+}
+
+a:disabled{
+    color: rgba(236, 0, 140, 0.4)
+}
+
+a:focus{
+    font-family: "Helvetica";
+    color: rgba(236, 0, 140);
+}
+
+/* BAND IMG--------------------------------------------------------BAND IMG */
+#home{
+
+    margin: 0;
+    padding: 0;
+}
+
+.band-members__name{
+    font-size: 15px;
+    font-weight: bold;
+    color: rgba(219, 216, 251, 0.8);
+    letter-spacing: 3.5px;
+    font-family: "Open Sans";
+    text-transform: uppercase;
+}
+
+.band-members img{
+    border: none;
+    margin-bottom: 25px;
+}
+
+.band-members__desc{
+    font-size: 13px;
+    color: rgba(219, 216, 251, 50%);
+    letter-spacing: 1.5px;
+    font-family: "Open Sans";
+}
+
+.band-members li{
+    text-align: start;
+}
+
+.band-members li p{
+    margin: 5px;
+}
+
+#home.content-section{
+    width: 100%;
+}
+
+#home, .band-members{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+/* BOX--------------------------------------------------------------------------BOX */
+.about-section__desc{
+    position: relative;
+    bottom: 280px;
+    padding: 30px 40px;
+    height: 360px;
+    width: 32.9%;
+    background-color: rgb(37, 7, 46);
+    border-bottom: 3px solid rgb(236, 0, 140);
+}
+
+.about-section__desc h3{
+    text-align: start;
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(219, 216, 251);
+    letter-spacing: 3.5px;
+    font-family: "Open Sans";
+    text-transform: uppercase;
+}
+
+.about-section__desc p{
+    text-align: start;
+    font-size: 13px;
+    color: rgba(219, 216, 251, 0.6);
+    letter-spacing: 1.5px;
+    font-family: "Open Sans";
+}
+
+/* CONCERTS------------------------------------------------------------CONCERTS */
+.concerts{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    float: right;
+    width: 70%;
+    grid-gap: 8%;
+}
+
+.concerts__info{
+    display: grid;
+    line-height: 0.1;
+    text-align: left;
+    grid-template-rows: 35% 1fr;
+}
+
+.concerts__date{
+    font-size: 15px;
+    font-weight: bold;
+    color: rgba(219, 216, 251, 0.8);
+    letter-spacing: 3.5px;
+    font-family: "Open Sans";
+    text-transform: uppercase;
+}
+
+.concerts__location{
+    font-size: 13px;
+    color: rgba(219, 216, 251, 50%);
+    letter-spacing: 3px;
+    font-family: "Open Sans";
+}
+
+.button{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    height: 50%;
+    font-family: "Open Sans Semibold";
+    font-size: 12px;
+    letter-spacing: 1.6px;
+    border: 1px solid rgba(204, 200, 255, 0.0);
+    border-radius: 5%;
+    background-color: rgba(204, 200, 255, 0.1);
+    color: rgba(204, 200, 255, 0.7);
+    text-transform: uppercase;
+    margin-left: 50%;
+    margin-top: 3%;
+}
+
+.button:hover{
+    font-family: "Helvetica";
+    background-color: rgba(219, 216, 251, 0.2);
+}
+
+.button:active{
+    font-family: "Helvetica";
+    background-color: rgba(219, 216, 251, 0.1);
+}
+
+.button:disabled{
+    color: rgba(219, 216, 251, 0.2)
+}
+
+button:focus{
+    background-color: rgba(219, 216, 251, 0.2);
+    outline:0;
+    border: 1px solid rgba(204, 200, 255, 0.8);
+}
+
+.concerts img{
+    width: 100%;
+    height: auto;
+    border-bottom: 3px solid rgb(236, 0, 140);
+    border-top: none;
+    margin-bottom: 3%;
+}
+
+/* VIDEO-----------------------------------------------------------------------VIDEO */
+#video{
+    margin-top: 20%;
+}
+
+iframe{
+    border-top: 3px solid rgb(236, 0, 140);
+    width: 80%;
+}
+
+/* PHOTOS----------------------------------------------------------------------PHOTOS */
+.gallery{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 2%;
+    width: 80%;
+    float: right;
+}
+
+.gallery__image{
+    width: 100%;
+}
+
+/* CONTACT-------------------------------------------------------------------CONTACT */
+#contact{
+    margin-top: 12%;
+    margin-left: 20%;
+}
+
+.contact{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    font-size: 13px;
+    color: rgba(219, 216, 251, 50%);
+    letter-spacing: 1.5px;
+    font-family: "Open Sans";
+    float: left;
+}
+
+#contact img{
+    border: none;
+}
+
+address{
+    font-style: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+}
+
+.form{
+    text-align: left;
+}
+
+.form__field{
+    line-height: 2.5;
+}
+
+.form__field:first-child{
+    margin-top: 6.5%;
+}
+
+.form__input{
+    display: block;
+    padding: 2%;
+    width: 70%;
+    background-color: rgba(204, 200, 255, 0.1);
+    border: 1px solid rgba(204, 200, 255, 0.0);
+    border-radius: 5px;
+    outline: 0px;
+}
+
+.form .button{
+    margin-top: 5%;
+    margin-left: 0;
+    padding: 1%;
+    width: 27%;
+}
+
+input, select, textarea{
+    color: rgb(255, 255, 255, 0.7);
+}
+
+/* FOOTER---------------------------------------------------------------------FOOTER */
+.social-links a{
+    width: 40px; 
+    height: 40px;
+    display: block;
+    margin: 20% auto;
+    text-indent: -9999px;
+    opacity: 0.8;
+    margin-bottom: -15px;
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+}
+
+.social-links a:active{
+    opacity: 0.6;
+}
+
+.social-links a:hover{
+    opacity: 0.9;
+}
+
+.social-links a:disabled{
+    opacity: 0.3;
+}
+
+.social-links a:focus{
+    opacity: 1;
+}
+
+.social-links__item1 a{
+    background-image: url("./images/fb.svg");
+}
+
+.social-links__item2 a{
+    background-image: url("./images/insta.svg");
+}
+
+.social-links__item3 a{
+    background-image: url("./images/last.svg");
+}
+
+.social-links__item4 a{
+    background-image: url("./images/yout.svg");
+}
+
+.screen-reader-only {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.page-header {
+    position: fixed;
+    top: 50px;
+    left: 50px;
+}
+
+.page-footer {
+    position: fixed;
+    bottom: 50px;
+    left: 50px;
+}
+
+.page-content {
+    margin-left: 220px;
+    padding: 0 5%;
+    text-align: right;
+}
+
+/*
+Projekt graficzny zakłada, że każda sekcja strony będzie wypełniać całą wysokość okna przeglądarki
+lub więcej, jeśli zawartość danej sekcji jest wyższa. Dlatego świetnym rozwiązaniem
+będzie użycie jednostki "vh", która oznacza 1% wysokości okna przeglądarki z właściwością "min-height",
+która wymusza wysokość elementu na zadaną wartość lub wyższą.
+*/
+.content-section {
+    min-height: 100vh;
+}
