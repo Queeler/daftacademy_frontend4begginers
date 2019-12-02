@@ -1,5 +1,12 @@
+/* ##########################################
+                    MAIN 
+########################################## */
 * {
     box-sizing: border-box;
+}
+
+.content-section {
+    min-height: 100vh;
 }
 
 body {
@@ -37,7 +44,9 @@ ul {
     margin-bottom: 4%;
 }
 
-/* HEAD-----------------------------------------------------------------HEAD */
+/* ##########################################
+                    HEAD 
+########################################## */
 .page-header{
     padding-top: 5px;
 }
@@ -81,7 +90,9 @@ a:focus{
     color: rgba(236, 0, 140);
 }
 
-/* BAND IMG--------------------------------------------------------BAND IMG */
+/* ##########################################
+                    BAND IMG 
+########################################## */
 #home{
 
     margin: 0;
@@ -127,7 +138,9 @@ a:focus{
     align-items: center; 
 }
 
-/* BOX--------------------------------------------------------------------------BOX */
+/* ##########################################
+                    BOX 
+########################################## */
 .about-section__desc{
     position: relative;
     bottom: 280px;
@@ -138,7 +151,7 @@ a:focus{
     border-bottom: 3px solid rgb(236, 0, 140);
 }
 
-.about-section__desc h3{
+.about-section__desc-header{
     text-align: start;
     font-size: 15px;
     font-weight: bold;
@@ -148,7 +161,7 @@ a:focus{
     text-transform: uppercase;
 }
 
-.about-section__desc p{
+.about-section__desc-details{
     text-align: start;
     font-size: 13px;
     color: rgba(219, 216, 251, 0.6);
@@ -156,7 +169,9 @@ a:focus{
     font-family: "Open Sans";
 }
 
-/* CONCERTS------------------------------------------------------------CONCERTS */
+/* ##########################################
+                    CONCERTS 
+########################################## */
 .concerts{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -234,7 +249,9 @@ button:focus{
     margin-bottom: 3%;
 }
 
-/* VIDEO-----------------------------------------------------------------------VIDEO */
+/* ##########################################
+                    VIDEO 
+########################################## */
 #video{
     margin-top: 20%;
 }
@@ -244,7 +261,9 @@ iframe{
     width: 80%;
 }
 
-/* PHOTOS----------------------------------------------------------------------PHOTOS */
+/* ##########################################
+                    PHOTOS 
+########################################## */
 .gallery{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -258,7 +277,9 @@ iframe{
     width: 100%;
 }
 
-/* CONTACT-------------------------------------------------------------------CONTACT */
+/* ##########################################
+                    CONTACT 
+########################################## */
 #contact{
     margin-top: 12%;
     margin-left: 20%;
@@ -275,7 +296,7 @@ iframe{
     float: left;
 }
 
-#contact img{
+#contact .gallery__image{
     border: none;
 }
 
@@ -320,7 +341,9 @@ input, select, textarea{
     color: rgb(255, 255, 255, 0.7);
 }
 
-/* FOOTER---------------------------------------------------------------------FOOTER */
+/* ##########################################
+                    FOOTER 
+########################################## */
 .social-links a{
     width: 40px; 
     height: 40px;
@@ -398,6 +421,192 @@ lub więcej, jeśli zawartość danej sekcji jest wyższa. Dlatego świetnym roz
 będzie użycie jednostki "vh", która oznacza 1% wysokości okna przeglądarki z właściwością "min-height",
 która wymusza wysokość elementu na zadaną wartość lub wyższą.
 */
-.content-section {
-    min-height: 100vh;
+
+
+@media only screen and (max-width:360px){
+
+/* ##########################################
+                    MAIN 
+########################################## */
+    .content-section{
+        min-height: 0;
+    }
+
+    body{
+        margin: 5px;
+    }
+
+    .content-section__header, .social-links{
+        margin: 40px;
+        text-align: center;
+    }
+    
+    .page-content{
+        margin: 0;
+        padding: 10px;
+    }
+
+/* ##########################################
+                    HEAD 
+########################################## */
+    .page-header{
+        position: unset;
+        padding: 10px;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .page-navigation__item{
+        line-height: 2;
+        text-align: center;
+    }
+
+    a{
+        color: rgba(236, 0, 140);
+    }
+
+    #home.content-section{
+        display: none;
+    }
+
+    .band__image{
+        width: 100%
+    }
+
+/* ##########################################
+                    BOX 
+########################################## */
+    .about-section__desc{
+        position: unset;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        border-bottom: none;
+    }
+
+    .about-section__desc-header{
+        text-align: center;
+    }
+    
+    .about-section__desc-details{
+        text-align: justify;
+    }
+
+/* ##########################################
+                    CONCERTS 
+########################################## */
+    /* #concerts.content-section{
+        height: 1258px;
+    } */
+
+    .concerts{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: auto;
+    }
+
+    .button{
+        height: 65%;
+    }
+
+/* ##########################################
+                    VIDEO 
+########################################## */
+    #video.content-section{
+        /* height: 350px; */
+        margin-top: 0;
+    }
+
+    iframe{
+        height: 17em;
+        width: 100%;
+    }
+
+/* ##########################################
+                    PHOTOS 
+########################################## */
+    @supports(display: grid){
+        #photos{
+            display: grid;
+        }
+        .gallery{
+            grid-template-columns: 1fr;
+            row-gap: 5px;
+            width: 100%;
+            height: auto;
+            float: right;
+        }
+    }
+    @supports not (display: grid){
+        #photos{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .gallery{
+            display: inline-block;
+            line-height: 30px;
+            width: 100%;
+        }
+    }
+/* ##########################################
+                    CONTACT 
+########################################## */
+    #contact.content-section{
+        height: 539px;
+    }
+
+    #contact{
+        margin-top: 0;
+        margin-left: 0;
+    }
+
+    .contact{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        width: 100%;
+    }
+
+    #contact .gallery__image{
+        width: 100%;
+    }
+
+    address{
+        display: none;
+    }
+
+    .form{
+        text-align: center;
+    }
+
+    .form__input{
+        width: 100%;
+    }
+
+    .form .button{
+        width: 40%;
+        height: 30px;
+    }
+
+/* ##########################################
+                    FOOTER 
+########################################## */
+    .page-footer{
+        position: unset;
+    }
+    
+    .social-links{
+        display: flex;
+        justify-content: center;
+    }
+
+    .social-links a{
+        background-size: 30px 30px;
+        margin: 0;
+        margin: 0 4px 0 4px;
+    }
 }
+
