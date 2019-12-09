@@ -203,6 +203,20 @@ a:focus{
     font-family: "Open Sans";
 }
 
+.hidden{
+    display: none;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    font-size: 15px;
+    font-weight: bold;
+    color: rgba(219, 216, 251, 0.8);
+    font-family: "Open Sans";
+    margin-left: 30%;
+    margin-top: 15%;
+}
+
 .button{
     grid-column-start: 2;
     grid-column-end: 3;
@@ -449,11 +463,24 @@ która wymusza wysokość elementu na zadaną wartość lub wyższą.
 /* ##########################################
                     HEAD 
 ########################################## */
+    .hamburger{
+        width: 35px;
+        height: 5px;
+        background-color: rgba(236, 0, 140);
+        margin: 6px 0;
+        position: relative;
+        bottom: 50px;
+    }
+
     .page-header{
         position: unset;
         padding: 10px;
         margin-top: 10px;
         text-align: center;
+    }
+
+    .page-navigation{
+        display: none;
     }
 
     .page-navigation__item{
