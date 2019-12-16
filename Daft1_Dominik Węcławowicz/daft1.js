@@ -1,12 +1,6 @@
-const x = document.querySelector(".page-navigation");
-function hamburgerFunction() {
-    if (x.style.display === "block") {
-      x.style.display = "none";
-    } else {
-      x.style.display = "block";
-    }
-}
-document.querySelector(".icon").addEventListener("click", hamburgerFunction)
+$("#icon").click(function() {
+  $('.page-navigation').toggleClass('.page-navigation-active');
+});
 
 let butt = document.querySelectorAll('.button'), el;
 for (let i = 0; i < 4; i++) {
@@ -30,3 +24,32 @@ document.getElementsByClassName('form__field')[2].addEventListener('click', func
   const obj = Object.fromEntries(formData);
   console.log(obj);
 });
+
+function myFunction(x) {
+  x.classList.toggle("open");
+}
+
+icon.addEventListener('click', function toggle() {
+  const menu = document.querySelector(".page-navigation");
+  menu.classList.toggle("new")
+});
+
+for (let i = 0; i < 9; i++) {
+  var element = document.getElementsByClassName('gallery__image');
+  result1 = element[i]
+  result1.addEventListener('mouseleave', () => {
+    element[i].classList.toggle("newer");
+  });
+}
+
+// const elements = document.getElementById('photos').getElementsByClassName('gallery__image');
+
+// for (let i = 0; i <= elements.length; i++) {
+// 	elements[i].addEventListener('animationend', function(e) {
+//     elements[i].classList.remove('animated');
+// 	});
+
+//   elements[i].addEventListener('mouseover', function(e) {
+//     elements[i].classList.add('animated')
+//   })
+// }
